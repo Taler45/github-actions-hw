@@ -1,0 +1,11 @@
+name: Task1
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+    say-hello-job:
+        runs-on: ubuntu-latest
+        steps:
+          - name: SayHello
+            run: echo "Hello, GitHub Actions!"
