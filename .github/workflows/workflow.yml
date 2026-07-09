@@ -1,7 +1,9 @@
-name: Task1
+name: Task2
 on:
   push:
-    branches: [main]
+    branches: [main, develop]
+  pull_request: 
+    branches: [develop]
   workflow_dispatch:
 jobs:
     say-hello-job:
@@ -9,3 +11,15 @@ jobs:
         steps:
           - name: SayHello
             run: echo "Hello, GitHub Actions!"
+    
+    test-coverage:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout code
+            uses: actions/checkout@v4
+
+          - name: Set up python
+            uses: action/setup-python@v5
+            with:
+              python-version: "3.12"
+
