@@ -1,4 +1,4 @@
-from myapp.py import add, subtract
+from myapp.app import add, subtract
 
 def test_add():
     assert add(6,7) == 13
