@@ -3,4 +3,3 @@ def add(a:float,b:float):
 
 def subtract(a:float, b:float):
     return a-b
-
